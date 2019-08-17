@@ -1,7 +1,6 @@
 var form = document.getElementById('addForm');
 var itemList = document.getElementById('items');
 
-
 // Form Submit event
 form.addEventListener('submit', addItem);
 //Delete event
@@ -38,11 +37,11 @@ function addItem(e){
 
 // Remove item
 function removeItem(e){
-    
+    // This is to target just the X not the whole item
     if(e.target.classList.contains('delete')){
         if(confirm('Are you sure?')){
             var li = e.target.parentElement;
-            itemList.removeChild(li); 
+            itemList.removeChild(li); //Because itemList is the ul and li is the child
 
         }        
     }
