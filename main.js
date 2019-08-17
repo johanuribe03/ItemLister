@@ -52,4 +52,9 @@ function removeItem(e){
 
 // Filter Items
 function filterItems(e){
+    // convert to lowercase
+    var text = e.target.value.toLowerCase();
+    // Get lis
+    var items = itemList.getElementsByTagName('li');
+    
 }
