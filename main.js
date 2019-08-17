@@ -1,7 +1,13 @@
 var form = document.getElementById('addForm');
+var itemList = document.getElementById('items');
+
 
 // Form Submit event
 form.addEventListener('submit', addItem);
+//Delete event
+itemList.addEventListener('click', removeItem);
+// Filter Event
+filter.addEventListener('keyup',filterItems);
 
 // Add item
 function addItem(e){
@@ -30,4 +36,11 @@ function addItem(e){
 
     // Append li to list
     itemList.appendChild(li);
+}
+
+// Remove item
+function removeItem(e){
+    
+        }        
+    }
 }
