@@ -6,8 +6,6 @@ var itemList = document.getElementById('items');
 form.addEventListener('submit', addItem);
 //Delete event
 itemList.addEventListener('click', removeItem);
-// Filter Event
-filter.addEventListener('keyup',filterItems);
 
 // Add item
 function addItem(e){
@@ -41,6 +39,11 @@ function addItem(e){
 // Remove item
 function removeItem(e){
     
+    if(e.target.classList.contains('delete')){
+        if(confirm('Are you sure?')){
+            var li = e.target.parentElement;
+            itemList.removeChild(li); 
+
         }        
     }
 }
